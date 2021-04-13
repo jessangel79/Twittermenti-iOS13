@@ -37,6 +37,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0284902625E8FB003D31B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A0284912625FAFA003D31B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD9EC65320FE2EF4002AE9BF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A0284922625FB00003D31B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD9EC65120FE2EF4002AE9BF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A0284932625FB15003D31B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
+				AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */,
+				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
+				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AD9EC64320FE2EF4002AE9BF = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +91,10 @@
 		AD9EC64E20FE2EF4002AE9BF /* Twittermenti */ = {
 			isa = PBXGroup;
 			children = (
-				AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */,
-				AD9EC65120FE2EF4002AE9BF /* ViewController.swift */,
-				AD9EC65320FE2EF4002AE9BF /* Main.storyboard */,
-				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
-				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
-				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
+				3A0284902625E8FB003D31B7 /* Model */,
+				3A0284912625FAFA003D31B7 /* View */,
+				3A0284922625FB00003D31B7 /* Controller */,
+				3A0284932625FB15003D31B7 /* Supporting Files */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -77,6 +109,7 @@
 				AD9EC64820FE2EF4002AE9BF /* Sources */,
 				AD9EC64920FE2EF4002AE9BF /* Frameworks */,
 				AD9EC64A20FE2EF4002AE9BF /* Resources */,
+				3A02848E2625E854003D31B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +166,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A02848E2625E854003D31B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD9EC64820FE2EF4002AE9BF /* Sources */ = {
@@ -287,8 +340,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
-				INFOPLIST_FILE = Twittermenti/Info.plist;
+				DEVELOPMENT_TEAM = AS4ZG3MAQH;
+				INFOPLIST_FILE = "Twittermenti/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,8 +358,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
-				INFOPLIST_FILE = Twittermenti/Info.plist;
+				DEVELOPMENT_TEAM = AS4ZG3MAQH;
+				INFOPLIST_FILE = "Twittermenti/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

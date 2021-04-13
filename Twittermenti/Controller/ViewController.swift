@@ -21,8 +21,5 @@ class ViewController: UIViewController {
 
     @IBAction func predictPressed(_ sender: Any) {
     
-    
     }
-    
 }
-
