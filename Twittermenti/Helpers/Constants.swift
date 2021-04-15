@@ -13,6 +13,8 @@ import Foundation
 struct Constants {
     static let twitterAPIKey = "TwitterAPIKey"
     static let twitterAPISecretKey = "TwitterAPISecretKey"
+    static let english = "en"
+    static let fullText = "full_text"
 }
 
 //var keyTwitterApi: String {

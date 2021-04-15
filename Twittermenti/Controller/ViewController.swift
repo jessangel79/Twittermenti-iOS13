@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwifteriOS
+//import SwifteriOS
 
 class ViewController: UIViewController {
     
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        getPrediction()
         searchTweet()
     }
     
@@ -38,6 +39,10 @@ class ViewController: UIViewController {
     
     private func searchTweet() {
         swifterService.searchTweet(using: "@Apple")
+    }
+    
+    private func getPrediction() {
+        swifterService.getPrediction()
     }
 
 }

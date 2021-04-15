@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5BE4A82628AC2E009AA414 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5BE4A72628AC2E009AA414 /* SwiftyJSON */; };
 		3A818BB726287D1600212E7B /* SwifterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818BB626287D1600212E7B /* SwifterService.swift */; };
 		3A9E634526272A6300086594 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */; };
 		3A9E635F26274EC100086594 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E635126274E5F00086594 /* SwifteriOS.framework */; };
@@ -96,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5BE4A82628AC2E009AA414 /* SwiftyJSON in Frameworks */,
 				3A9E635F26274EC100086594 /* SwifteriOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +219,9 @@
 			dependencies = (
 			);
 			name = Twittermenti;
+			packageProductDependencies = (
+				3A5BE4A72628AC2E009AA414 /* SwiftyJSON */,
+			);
 			productName = Twittermenti;
 			productReference = AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +251,9 @@
 				Base,
 			);
 			mainGroup = AD9EC64320FE2EF4002AE9BF;
+			packageReferences = (
+				3A5BE4A62628AC2E009AA414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = AD9EC64D20FE2EF4002AE9BF /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -546,6 +554,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A5BE4A62628AC2E009AA414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A5BE4A72628AC2E009AA414 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A5BE4A62628AC2E009AA414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD9EC64420FE2EF4002AE9BF /* Project object */;
 }
