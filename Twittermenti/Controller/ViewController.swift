@@ -7,19 +7,37 @@
 //
 
 import UIKit
+import SwifteriOS
 
 class ViewController: UIViewController {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sentimentLabel: UILabel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    
+    // MARK: - Actions
 
     @IBAction func predictPressed(_ sender: Any) {
     
     }
+    
+    // MARK: - Properties
+    
+    private let swifterService = SwifterService()
+    
+    // MARK: - View Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchTweet()
+    }
+    
+    // MARK: - Methods
+    
+    private func searchTweet() {
+        swifterService.searchTweet(using: "@Apple")
+    }
+
 }

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A818BB726287D1600212E7B /* SwifterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818BB626287D1600212E7B /* SwifterService.swift */; };
 		3A9E634526272A6300086594 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */; };
 		3A9E635F26274EC100086594 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E635126274E5F00086594 /* SwifteriOS.framework */; };
 		3A9E636026274EC100086594 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E635126274E5F00086594 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A9E6376262753A400086594 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E6375262753A400086594 /* ApiKeys.swift */; };
+		3A9E637E2627546600086594 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E637D2627546600086594 /* ApiKeys.plist */; };
+		3A9E6381262755F000086594 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E6380262755F000086594 /* Constants.swift */; };
 		AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */; };
 		AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC65120FE2EF4002AE9BF /* ViewController.swift */; };
 		AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65320FE2EF4002AE9BF /* Main.storyboard */; };
@@ -71,8 +75,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A818BB626287D1600212E7B /* SwifterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterService.swift; sourceTree = "<group>"; };
 		3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		3A9E634826274E5F00086594 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../Udemy_Exercices/iOS 13 & Swift 5_The Complete iOS App Dev Bootcamp/CreateML/Twittermenti/Swifter/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		3A9E6375262753A400086594 /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		3A9E637D2627546600086594 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		3A9E6380262755F000086594 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9EC65120FE2EF4002AE9BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */,
+				3A818BB626287D1600212E7B /* SwifterService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +131,8 @@
 		3A0284932625FB15003D31B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A9E6375262753A400086594 /* ApiKeys.swift */,
+				3A9E637D2627546600086594 /* ApiKeys.plist */,
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
@@ -149,6 +160,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A9E637F262755CB00086594 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E6380262755F000086594 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AD9EC64320FE2EF4002AE9BF = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +193,7 @@
 				3A0284902625E8FB003D31B7 /* Model */,
 				3A0284912625FAFA003D31B7 /* View */,
 				3A0284922625FB00003D31B7 /* Controller */,
+				3A9E637F262755CB00086594 /* Helpers */,
 				3A0284932625FB15003D31B7 /* Supporting Files */,
 			);
 			path = Twittermenti;
@@ -208,11 +228,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "London App Brewery";
 				TargetAttributes = {
 					AD9EC64B20FE2EF4002AE9BF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -287,6 +308,7 @@
 				AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */,
 				AD9EC66220FE319B002AE9BF /* README.md in Resources */,
 				AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */,
+				3A9E637E2627546600086594 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9E6381262755F000086594 /* Constants.swift in Sources */,
 				3A9E634526272A6300086594 /* TweetSentimentClassifier.mlmodel in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
+				3A9E6376262753A400086594 /* ApiKeys.swift in Sources */,
+				3A818BB726287D1600212E7B /* SwifterService.swift in Sources */,
 				AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +396,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -432,6 +458,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -474,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.Twittermenti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -492,7 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.Twittermenti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
