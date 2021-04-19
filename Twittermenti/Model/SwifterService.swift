@@ -29,7 +29,6 @@ final class SwifterService {
     
     private let sentimentClassifer = try? TweetSentimentClassifier(configuration: MLModelConfiguration())
     private let tweetCount = 100
-//    private var sentimentScore: Int = 0
 
     // MARK: - Methods
     
@@ -46,24 +45,18 @@ final class SwifterService {
             guard let sentimentScore = self.makePredictions(with: tweets) else { return }
             completionHandler(true, sentimentScore)
             
-//            guard let getPredictions = self.makePredictions(with: tweets) else { return }
-//            self.sentimentScore = getPredictions
-//            completionHandler(true, self.sentimentScore)
-
         } failure: { (error) in
             print("There was an error with the Twitter API Request, \(error)")
         }
     }
     
     private func makePredictions(with tweets: [TweetSentimentClassifierInput]) -> Int? {
-//        sentimentScore = 0
         var sentimentScore = 0
         do {
             guard let predictions = try sentimentClassifer?.predictions(inputs: tweets) else { return nil }
             for pred in predictions {
                 let predLabel = pred.label
                 getSentimentScore(predLabel, &sentimentScore)
-//                sentimentScore = getSentimentScore(for: pred.label)
             }
         } catch {
             print("There was an error with macking a prediction, \(error)")
@@ -78,13 +71,4 @@ final class SwifterService {
             sentimentScore -= 1
         }
     }
-    
-//    private func getSentimentScore(for sentiment: String) -> Int {
-//        if sentiment == SentimentType.positif.rawValue {
-//            sentimentScore += 1
-//        } else if sentiment == SentimentType.negatif.rawValue {
-//            sentimentScore -= 1
-//        }
-//        return sentimentScore
-//    }
 }
