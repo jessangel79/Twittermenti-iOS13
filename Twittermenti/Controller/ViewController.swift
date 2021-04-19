@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import SwifteriOS
 
 class ViewController: UIViewController {
     
@@ -20,7 +19,6 @@ class ViewController: UIViewController {
     // MARK: - Properties
     
     private let swifterService = SwifterService()
-    private var sentimentScore: Int?
 
     // MARK: - Actions
 
@@ -35,31 +33,37 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Methods
-
+    
     private func searchTweet() {
         guard let query = textField.text, !query.isEmpty else { return }
-        swifterService.searchTweet(using: query) { (success, sentimentScore) in
+        swifterService.fetchTweets(using: query) { (success, sentimentScore) in
             if success {
                 guard let sentimentScore = sentimentScore else { return }
-                self.sentimentScore = sentimentScore
-                self.diplayScore()
+                self.updateUI(with: sentimentScore)
             } else {
                 print("There is an error with search Tweet.")
                 return
             }
         }
         textField.text = String()
-        }
+    }
     
-    private func diplayScore() {
-        guard let sentimentScore = self.sentimentScore else { return }
+    private func updateUI(with sentimentScore: Int) {
         switch sentimentScore {
-        case 3..<1000:
+        case 20..<1000:
+            self.sentimentLabel.text = "😍"
+        case 10..<20:
+            self.sentimentLabel.text = "😀"
+        case 1..<10:
             self.sentimentLabel.text = "🙂"
-        case -1000..<(-3):
-            self.sentimentLabel.text = "☹️"
-        default:
+        case 0:
             self.sentimentLabel.text = "😐"
+        case -10..<(0):
+            self.sentimentLabel.text = "☹️"
+        case -20..<(-10):
+            self.sentimentLabel.text = "😡"
+        default:
+            self.sentimentLabel.text = "🤮"
         }
         print("SentimentScore - display : \(sentimentScore)")
     }

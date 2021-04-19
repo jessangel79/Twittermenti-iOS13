@@ -28,35 +28,42 @@ final class SwifterService {
     }
     
     private let sentimentClassifer = try? TweetSentimentClassifier(configuration: MLModelConfiguration())
-    private var sentimentScore: Int = 0
+    private let tweetCount = 100
+//    private var sentimentScore: Int = 0
 
     // MARK: - Methods
     
-    func searchTweet(using word: String, completionHandler: @escaping (Bool, Int?) -> Void) {
-        swifter.searchTweet(using: word, lang: Constants.english, count: 100, tweetMode: .extended) { (results, metadata) in
+    func fetchTweets(using searchText: String, completionHandler: @escaping (Bool, Int?) -> Void) {
+        swifter.searchTweet(using: searchText, lang: Constants.english, count: tweetCount, tweetMode: .extended) { (results, metadata) in
             var tweets = [TweetSentimentClassifierInput]()
 
-            for index in 0..<100 {
+            for index in 0..<self.tweetCount {
                 guard let tweet = results[index][Constants.fullText].string else { return }
                 let tweetForclassification = TweetSentimentClassifierInput(text: tweet)
                 tweets.append(tweetForclassification)
             }
             
-            self.sentimentScore = self.getPredictions(of: tweets)
-            completionHandler(true, self.sentimentScore)
+            guard let sentimentScore = self.makePredictions(with: tweets) else { return }
+            completionHandler(true, sentimentScore)
+            
+//            guard let getPredictions = self.makePredictions(with: tweets) else { return }
+//            self.sentimentScore = getPredictions
+//            completionHandler(true, self.sentimentScore)
 
         } failure: { (error) in
             print("There was an error with the Twitter API Request, \(error)")
         }
     }
     
-    private func getPredictions(of tweets: [TweetSentimentClassifierInput]) -> Int {
-        sentimentScore = 0
+    private func makePredictions(with tweets: [TweetSentimentClassifierInput]) -> Int? {
+//        sentimentScore = 0
+        var sentimentScore = 0
         do {
-            guard let predictions = try sentimentClassifer?.predictions(inputs: tweets) else { return 0 }
+            guard let predictions = try sentimentClassifer?.predictions(inputs: tweets) else { return nil }
             for pred in predictions {
-                // Counter of sentiment
-                sentimentScore = getSentimentScore(for: pred.label)
+                let predLabel = pred.label
+                getSentimentScore(predLabel, &sentimentScore)
+//                sentimentScore = getSentimentScore(for: pred.label)
             }
         } catch {
             print("There was an error with macking a prediction, \(error)")
@@ -64,12 +71,20 @@ final class SwifterService {
         return sentimentScore
     }
     
-    private func getSentimentScore(for sentiment: String) -> Int {
-        if sentiment == SentimentType.positif.rawValue {
+    private func getSentimentScore(_ predLabel: String, _ sentimentScore: inout Int) {
+        if predLabel == SentimentType.positif.rawValue {
             sentimentScore += 1
-        } else if sentiment == SentimentType.negatif.rawValue {
+        } else if predLabel == SentimentType.negatif.rawValue {
             sentimentScore -= 1
         }
-        return sentimentScore
     }
+    
+//    private func getSentimentScore(for sentiment: String) -> Int {
+//        if sentiment == SentimentType.positif.rawValue {
+//            sentimentScore += 1
+//        } else if sentiment == SentimentType.negatif.rawValue {
+//            sentimentScore -= 1
+//        }
+//        return sentimentScore
+//    }
 }
