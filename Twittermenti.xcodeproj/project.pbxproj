@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A26EFAC2629F60100C155D1 /* SentimentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26EFAB2629F60100C155D1 /* SentimentType.swift */; };
 		3A5BE4A82628AC2E009AA414 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5BE4A72628AC2E009AA414 /* SwiftyJSON */; };
 		3A818BB726287D1600212E7B /* SwifterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818BB626287D1600212E7B /* SwifterService.swift */; };
 		3A9E634526272A6300086594 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A26EFAB2629F60100C155D1 /* SentimentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentType.swift; sourceTree = "<group>"; };
 		3A818BB626287D1600212E7B /* SwifterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterService.swift; sourceTree = "<group>"; };
 		3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		3A9E634826274E5F00086594 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../Udemy_Exercices/iOS 13 & Swift 5_The Complete iOS App Dev Bootcamp/CreateML/Twittermenti/Swifter/Swifter.xcodeproj"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				3A9E634426272A6300086594 /* TweetSentimentClassifier.mlmodel */,
 				3A818BB626287D1600212E7B /* SwifterService.swift */,
+				3A26EFAB2629F60100C155D1 /* SentimentType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				3A9E6381262755F000086594 /* Constants.swift in Sources */,
 				3A9E634526272A6300086594 /* TweetSentimentClassifier.mlmodel in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
+				3A26EFAC2629F60100C155D1 /* SentimentType.swift in Sources */,
 				3A9E6376262753A400086594 /* ApiKeys.swift in Sources */,
 				3A818BB726287D1600212E7B /* SwifterService.swift in Sources */,
 				AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */,
