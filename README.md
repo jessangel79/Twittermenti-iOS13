@@ -43,8 +43,11 @@ Add to project => Drag and drop ***Swifter.xcodeproj*** (rep Swifter) in the pro
 >  1. https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828294#questions
  > 2. https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828296#questions
 
-![Swifter add to project - process](Documentation/Swifter-Add-to-project.png)
+---
 
-Video : https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/
+![Swifter add to project 1 - process](Documentation/Swifter-Add-to-project-1.png)
+
+![Swifter add to project 2 - process](Documentation/Swifter-Add-to-project-2.png)
 
 ---
+Video : https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/
