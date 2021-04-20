@@ -39,8 +39,9 @@ https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference
 Clone project "Swifter" from GitHub => https://github.com/mattdonnelly/Swifter.git
 Add to project => Drag and drop ***Swifter.xcodeproj*** (rep Swifter) in the project and embed Frameworks ***« SwifteriOS.framework »***
 
->__Setting Up the Swifter Framework :__ https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828296#questions
-
+>__Setting Up the Swifter Framework :__
+>  1. https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828294#questions
+ > 2. https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828296#questions
 
 ![Swifter add to project - process](Documentation/Swifter-Add-to-project.png)
 
