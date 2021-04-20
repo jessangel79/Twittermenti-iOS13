@@ -12,6 +12,8 @@ Section 26: CreateML & Natural Language Processing (NLP)
 
 ![End Banner](Documentation/readme-end-banner.png)
 
+---
+
 ### Fonctionnalités :
 
 Pour l'utilisation de ce projet merci de télécharger le fichier **TweetSentimentClassifier.mlmodel** avec le lien suivant :
@@ -26,6 +28,8 @@ To use this project, please download the **TweetSentimentClassifier.mlmodel** fi
 CoreML file:
 https://storage.googleapis.com/images-angelappdev/CoreML/TweetSentimentClassifier.mlmodel
 
+---
+
 #### Twitter API :
 
 https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
@@ -35,10 +39,11 @@ https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference
 Clone project "Swifter" from GitHub => https://github.com/mattdonnelly/Swifter.git
 Add to project => Drag and drop ***Swifter.xcodeproj*** (rep Swifter) in the project and embed Frameworks ***« SwifteriOS.framework »***
 
+>__Setting Up the Swifter Framework :__ https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828296#questions
+
+
 ![Swifter add to project - process](Documentation/Swifter-Add-to-project.png)
 
-https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/
+Video : https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/
 
-#### Courses :
-
-https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16828288#questions
+---
